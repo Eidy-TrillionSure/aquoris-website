@@ -1,16 +1,16 @@
 {
   "placeholderImages": [
     {
-      "id": "doctor-burnout-asian",
-      "description": "An Asian doctor looking thoughtful in a modern hospital setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1576089235406-0612d7bb033e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhc2lhbiUyMGRvY3RvcnxlbnwwfHx8fDE3NjMxNTU2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "asian doctor"
+      "id": "abstract-data-flow",
+      "description": "An abstract visualization of complex data flows and reasoning pathways in a medical context.",
+      "imageUrl": "https://images.unsplash.com/photo-1626908013351-800ddd734b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGRhdGF8ZW58MHx8fHwxNzYzMTE1NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract data"
     },
     {
-      "id": "solution-ai-abstract",
-      "description": "An abstract, premium visual representing medical technology and data.",
-      "imageUrl": "https://images.unsplash.com/photo-1631824681694-60908ffbbff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMG1lZGljYWx8ZW58MHx8fHwxNzYzMTQ3ODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract medical"
+      "id": "ai-reasoning-network",
+      "description": "A minimal, premium visual representing an AI intelligence network with interconnected nodes.",
+      "imageUrl": "https://images.unsplash.com/photo-1674027444474-e63f9d516f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMG5ldHdvcmt8ZW58MHx8fHwxNzYzMTczODExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai network"
     }
   ]
 }

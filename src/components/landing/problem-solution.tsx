@@ -3,8 +3,8 @@ import { SectionWrapper } from './section-wrapper';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProblemSolution() {
-  const problemImage = PlaceHolderImages.find(p => p.id === 'doctor-burnout-asian');
-  const solutionImage = PlaceHolderImages.find(p => p.id === 'solution-ai-abstract');
+  const problemImage = PlaceHolderImages.find(p => p.id === 'abstract-data-flow');
+  const solutionImage = PlaceHolderImages.find(p => p.id === 'ai-reasoning-network');
 
   return (
     <SectionWrapper id="problem">

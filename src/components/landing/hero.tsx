@@ -6,12 +6,19 @@ export function Hero() {
     <section className="relative w-full pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div 
         aria-hidden="true" 
-        className="absolute inset-0 bg-gradient-to-br from-background via-[#C8F3FF]/30 to-[#DCD6FF]/30 dark:from-background dark:via-[#0f343e]/30 dark:to-[#221c3e]/30">
+        className="absolute inset-0 bg-gradient-to-br from-background via-primary/10 to-secondary/10 dark:from-background dark:via-primary/5 dark:to-secondary/5">
       </div>
+      <div 
+        aria-hidden="true"
+        className="absolute inset-0 opacity-10 dark:[&_div]:bg-white"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 25% 25%, hsl(var(--primary-foreground)) 1px, transparent 0), radial-gradient(circle at 75% 75%, hsl(var(--secondary-foreground)) 1px, transparent 0)',
+          backgroundSize: '3rem 3rem',
+        }}
+      />
       <div className="container relative text-center animate-fade-in-up">
-        <div className="flex justify-center items-center gap-2 mb-4">
-          <Stethoscope className="h-6 w-6 text-primary-foreground/80 fill-primary" />
-          <span className="font-semibold">Aquoris Intelligence</span>
+        <div className="inline-block rounded-full bg-primary/20 p-3 mb-4">
+          <Stethoscope className="h-6 w-6 text-primary-foreground fill-primary" />
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 dark:from-white dark:to-gray-300">
           Reasoning Intelligence for Doctors

@@ -14,7 +14,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <a href="#" className="mr-6 flex items-center space-x-2">
-          <Stethoscope className="h-6 w-6 text-primary-foreground/80 fill-primary" />
+          <div className="bg-primary/20 text-primary-foreground rounded-md p-1.5">
+            <Stethoscope className="h-5 w-5 fill-primary" />
+          </div>
           <span className="font-bold sm:inline-block">Aquoris Intelligence</span>
         </a>
         <nav className="hidden flex-1 md:flex items-center space-x-6 text-sm font-medium">
