@@ -1,6 +1,6 @@
 'use client';
-import { Stethoscope } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Logo } from '../logo';
 
 export function Header() {
   const navLinks = [
@@ -12,12 +12,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center">
+      <div className="container flex h-20 max-w-screen-2xl items-center">
         <a href="#" className="mr-6 flex items-center space-x-2">
-          <div className="bg-primary/20 text-primary-foreground rounded-md p-1.5">
-            <Stethoscope className="h-5 w-5 fill-primary" />
-          </div>
-          <span className="font-bold sm:inline-block">Aquoris Intelligence</span>
+          <Logo className="h-10 w-auto" />
         </a>
         <nav className="hidden flex-1 md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (

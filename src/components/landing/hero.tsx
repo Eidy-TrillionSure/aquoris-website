@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Stethoscope } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -17,9 +16,6 @@ export function Hero() {
         }}
       />
       <div className="container relative text-center animate-fade-in-up">
-        <div className="inline-block rounded-full bg-primary/20 p-3 mb-4">
-          <Stethoscope className="h-6 w-6 text-primary-foreground fill-primary" />
-        </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 dark:from-white dark:to-gray-300">
           Reasoning Intelligence for Doctors
         </h1>
