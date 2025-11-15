@@ -1,6 +1,5 @@
 'use client';
 import { Stethoscope } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
 export function Header() {
@@ -12,7 +11,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <a href="#" className="mr-6 flex items-center space-x-2">
           <Stethoscope className="h-6 w-6 text-primary-foreground/80 fill-primary" />
@@ -31,10 +30,10 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Button asChild variant="ghost">
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Contact</a>
           </Button>
           <Button asChild className="shadow-lg hover:shadow-primary/30 transition-shadow">
-             <a href="#demo">Request a Demo</a>
+             <a href="#demo">Request Demo</a>
           </Button>
         </div>
       </div>

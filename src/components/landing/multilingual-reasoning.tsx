@@ -42,31 +42,31 @@ export function MultilingualReasoning() {
     <SectionWrapper id="demo">
       <div className="flex flex-col items-center text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-          Experience Multilingual Clinical Reasoning
+          Asia-First Multilingual Clinical Reasoning
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          Enter a clinical scenario in any supported language. Our AI will provide reasoning and insights in that same language.
+          Enter a clinical scenario in any supported language. Our AI will provide reasoning and insights in that same language, demonstrating the core of Vega OS.
         </p>
       </div>
 
-      <Card className="mt-12 max-w-4xl mx-auto shadow-xl">
+      <Card className="mt-12 max-w-4xl mx-auto shadow-xl bg-background/80 backdrop-blur-sm">
         <CardContent className="p-6">
           <form action={formAction} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="col-span-1 md:col-span-3">
-                    <Label htmlFor="query">Clinical Query</Label>
+                    <Label htmlFor="query" className="sr-only">Clinical Query</Label>
                     <Textarea
                     id="query"
                     name="query"
-                    placeholder="e.g., 'A 58-year-old male presents with chest pain radiating to the left arm...'"
-                    className="mt-1 min-h-[120px]"
+                    placeholder="Enter a brief clinical query..."
+                    className="mt-1 min-h-[120px] bg-white dark:bg-black/20"
                     required
                     />
                 </div>
                 <div className="col-span-1 md:col-span-3">
-                    <Label htmlFor="language">Language</Label>
+                    <Label htmlFor="language" className="sr-only">Language</Label>
                     <Select name="language" defaultValue="English">
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1 bg-white dark:bg-black/20">
                         <SelectValue placeholder="Select a language" />
                     </SelectTrigger>
                     <SelectContent>
@@ -91,9 +91,9 @@ export function MultilingualReasoning() {
           </form>
 
           <div className="mt-6">
-              <h3 className="font-semibold mb-2">AI Response:</h3>
-              <Card className="min-h-[150px] bg-secondary/30">
-                  <CardContent className="p-4">
+              <h3 className="font-semibold mb-2 text-left">AI Response:</h3>
+              <Card className="min-h-[150px] bg-secondary/20">
+                  <CardContent className="p-4 text-left">
                       {useFormStatus().pending ? (
                         <div className="space-y-2">
                             <Skeleton className="h-4 w-[80%]" />

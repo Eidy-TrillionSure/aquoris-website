@@ -1,20 +1,19 @@
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SectionWrapper } from './section-wrapper';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProblemSolution() {
-  const problemImage = PlaceHolderImages.find(p => p.id === 'doctor-burnout');
-  const solutionImage = PlaceHolderImages.find(p => p.id === 'solution-ai');
+  const problemImage = PlaceHolderImages.find(p => p.id === 'doctor-burnout-asian');
+  const solutionImage = PlaceHolderImages.find(p => p.id === 'solution-ai-abstract');
 
   return (
     <SectionWrapper id="problem">
       <div className="grid gap-12 md:gap-16">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Crisis of Physician Burnout</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Global Challenge of Physician Burnout</h2>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                Doctors are facing unprecedented levels of burnout, overwhelmed by administrative tasks that detract from patient care. The burden of documentation, especially SOAP notes, consumes valuable time and energy, leading to exhaustion and a decline in job satisfaction.
+                Across Asia and the world, physicians face immense pressure from administrative duties, which detracts from their core focus: patient care. The cognitive load of documentation and complex decision-making contributes to widespread professional fatigue.
               </p>
             </div>
             {problemImage && (
@@ -22,9 +21,9 @@ export function ProblemSolution() {
                     src={problemImage.imageUrl}
                     alt={problemImage.description}
                     data-ai-hint={problemImage.imageHint}
-                    width={800}
-                    height={600}
-                    className="rounded-xl object-cover shadow-lg"
+                    width={600}
+                    height={400}
+                    className="rounded-xl object-cover shadow-lg aspect-[3/2]"
                 />
             )}
         </div>
@@ -34,15 +33,15 @@ export function ProblemSolution() {
                     src={solutionImage.imageUrl}
                     alt={solutionImage.description}
                     data-ai-hint={solutionImage.imageHint}
-                    width={800}
-                    height={600}
-                    className="rounded-xl object-cover shadow-lg md:order-first"
+                    width={600}
+                    height={400}
+                    className="rounded-xl object-cover shadow-lg md:order-first aspect-[3/2]"
                 />
             )}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution: Vega OS</h2>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                Aquoris Intelligence introduces Vega OS, a clinical reasoning platform that automates SOAP note generation from doctor-patient conversations. Our AI streamlines workflows, provides instant consult support, and allows doctors to focus on what truly matters: their patients.
+                Aquoris Intelligence provides Vega OS, a clinical reasoning platform that integrates seamlessly into doctor workflows. By structuring patient encounters and automating documentation with multimodal AI, Vega OS gives physicians the space to focus on critical thinking and patient care. Its multilingual capabilities are designed for the diverse healthcare ecosystems across Asia.
               </p>
             </div>
         </div>

@@ -1,16 +1,16 @@
 {
   "placeholderImages": [
     {
-      "id": "doctor-burnout",
-      "description": "A doctor looking tired and stressed in a hospital hallway.",
-      "imageUrl": "https://images.unsplash.com/photo-1662997777051-f50b550bff53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N0b3IlMjBob3NwaXRhbHxlbnwwfHx8fDE3NjMxNzMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "doctor hospital"
+      "id": "doctor-burnout-asian",
+      "description": "An Asian doctor looking thoughtful in a modern hospital setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1576089235406-0612d7bb033e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhc2lhbiUyMGRvY3RvcnxlbnwwfHx8fDE3NjMxNTU2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "asian doctor"
     },
     {
-      "id": "solution-ai",
-      "description": "An abstract image representing AI and healthcare.",
-      "imageUrl": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYzMjE2MjkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract technology"
+      "id": "solution-ai-abstract",
+      "description": "An abstract, premium visual representing medical technology and data.",
+      "imageUrl": "https://images.unsplash.com/photo-1631824681694-60908ffbbff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMG1lZGljYWx8ZW58MHx8fHwxNzYzMTQ3ODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract medical"
     }
   ]
 }
