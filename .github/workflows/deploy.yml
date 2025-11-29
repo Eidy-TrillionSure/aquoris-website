@@ -1,0 +1,66 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+# Grant permissions for deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # JOB 1: BUILD & CHECK (Runs on both PRs and Main)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # CI Step 1: Linting (Checks for messy code/errors)
+      - name: Run Lint
+        run: npm run lint
+
+      # CI Step 2: Type Checking (Checks for TS errors)
+      - name: Run Type Check
+        run: npm run type-check
+
+      # CI Step 3: Build (Ensures the app actually compiles)
+      - name: Build Project
+        run: npm run build
+
+      # Upload Artifact (Prepares for deployment)
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # JOB 2: DEPLOY (Runs ONLY on Main, and only if Build passed)
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' # <--- The Safety Guard
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
