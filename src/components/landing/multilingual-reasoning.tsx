@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { handleReasoning } from '@/app/actions';
+import { useState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { SectionWrapper } from './section-wrapper';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -11,11 +11,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Lightbulb, LoaderCircle } from 'lucide-react';
 import { Skeleton } from '../ui/skeleton';
-
-const initialState = {
-  response: null,
-  error: null,
-};
 
 const languages = [
   { value: 'English', label: 'English' },
@@ -36,7 +31,21 @@ function SubmitButton() {
 }
 
 export function MultilingualReasoning() {
-  const [state, formAction] = useFormState(handleReasoning, initialState);
+  const [response, setResponse] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
+
+  const handleSubmit = (formData: FormData) => {
+    setPending(true);
+    setError(null);
+    setResponse(null);
+
+    // Simulate API call for static site
+    setTimeout(() => {
+      setResponse("This feature is for demonstration purposes and is currently inactive in this static version of the site.");
+      setPending(false);
+    }, 1000);
+  };
 
   return (
     <SectionWrapper id="demo">
@@ -51,7 +60,7 @@ export function MultilingualReasoning() {
 
       <Card className="mt-12 max-w-4xl mx-auto shadow-xl bg-background/80 backdrop-blur-sm">
         <CardContent className="p-6">
-          <form action={formAction} className="space-y-6">
+          <form action={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="col-span-1 md:col-span-3">
                     <Label htmlFor="query" className="sr-only">Clinical Query</Label>
@@ -82,10 +91,10 @@ export function MultilingualReasoning() {
             
             <SubmitButton />
 
-            {state.error && (
+            {error && (
               <Alert variant="destructive" className="mt-4">
                 <AlertTitle>Error</AlertTitle>
-                <AlertDescription>{state.error}</AlertDescription>
+                <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
           </form>
@@ -94,14 +103,14 @@ export function MultilingualReasoning() {
               <h3 className="font-semibold mb-2 text-left">AI Response:</h3>
               <Card className="min-h-[150px] bg-secondary/20">
                   <CardContent className="p-4 text-left">
-                      {useFormStatus().pending ? (
+                      {pending ? (
                         <div className="space-y-2">
                             <Skeleton className="h-4 w-[80%]" />
                             <Skeleton className="h-4 w-[90%]" />
                             <Skeleton className="h-4 w-[75%]" />
                         </div>
-                      ) : state.response ? (
-                          <p className="text-muted-foreground whitespace-pre-wrap">{state.response}</p>
+                      ) : response ? (
+                          <p className="text-muted-foreground whitespace-pre-wrap">{response}</p>
                       ) : (
                           <p className="text-muted-foreground/70 italic">The AI's response will appear here...</p>
                       )}

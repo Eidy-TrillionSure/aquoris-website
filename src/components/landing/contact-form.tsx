@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
-import { handleContact } from '@/app/actions';
+import { useEffect, useState, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useToast } from '@/hooks/use-toast';
 import { SectionWrapper } from './section-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,12 +10,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { LoaderCircle } from 'lucide-react';
-
-const initialState = {
-  message: null,
-  errors: null,
-  success: false,
-};
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -29,23 +22,22 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useFormState(handleContact, initialState);
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (state.success === true) {
+  const handleSubmit = (formData: FormData) => {
+    setPending(true);
+    // Simulate API call for static site
+    setTimeout(() => {
       toast({
         title: 'Success!',
-        description: state.message,
+        description: 'Thank you for your message! We will get back to you soon.',
       });
-    } else if (state.success === false && state.message) {
-      toast({
-        variant: 'destructive',
-        title: 'Error',
-        description: state.message,
-      });
-    }
-  }, [state, toast]);
+      formRef.current?.reset();
+      setPending(false);
+    }, 1000);
+  };
 
   return (
     <SectionWrapper id="contact" className="bg-secondary/30">
@@ -55,21 +47,18 @@ export function ContactForm() {
           <CardDescription>Have a question or want to partner with us? Drop a line below.</CardDescription>
         </CardHeader>
         <CardContent>
-          <form action={formAction} className="space-y-4">
+          <form action={handleSubmit} ref={formRef} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input id="name" name="name" placeholder="Your Name" required />
-              {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" placeholder="your@email.com" required />
-              {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" placeholder="Your message..." required className="min-h-[120px]" />
-              {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
             </div>
             <SubmitButton />
           </form>
