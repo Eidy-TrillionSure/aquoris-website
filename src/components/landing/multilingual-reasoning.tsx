@@ -58,7 +58,7 @@ export function MultilingualReasoning() {
         </p>
       </div>
 
-      <Card className="mt-12 max-w-4xl mx-auto shadow-xl bg-background/80 backdrop-blur-sm">
+      {/* <Card className="mt-12 max-w-4xl mx-auto shadow-xl bg-background/80 backdrop-blur-sm">
         <CardContent className="p-6">
           <form action={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -118,7 +118,7 @@ export function MultilingualReasoning() {
               </Card>
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
     </SectionWrapper>
   );
 }

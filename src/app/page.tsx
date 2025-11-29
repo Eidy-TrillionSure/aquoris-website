@@ -22,7 +22,7 @@ export default function Home() {
         <Traction />
         <Investors />
         <GlowSeparator />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </main>
       <Footer />
     </div>
