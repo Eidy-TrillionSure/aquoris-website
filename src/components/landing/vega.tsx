@@ -56,22 +56,20 @@ export function Vega() {
             ))}
         </div>
 
-        <div className="mt-20">
-            <div className="max-w-5xl mx-auto border rounded-lg bg-background/50 shadow-lg backdrop-blur-sm">
-                <div className="grid divide-y md:divide-y-0 md:divide-x divide-border md:grid-cols-3">
-                    {stats.map((stat) => (
-                        <div key={stat.label} className="p-8 flex flex-col items-center text-center gap-2">
-                            <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
-                                {stat.icon}
-                            </div>
-                            <h3 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline text-primary-foreground/90">
-                                {stat.value}
-                            </h3>
-                            <p className="text-muted-foreground text-lg">{stat.label}</p>
+        <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-20">
+            {stats.map((stat) => (
+                <Card key={stat.label} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
+                    <CardContent className="p-8 flex flex-col items-center text-center gap-2 pt-8">
+                        <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
+                            {stat.icon}
                         </div>
-                    ))}
-                </div>
-            </div>
+                        <h3 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline text-primary-foreground/90">
+                            {stat.value}
+                        </h3>
+                        <p className="text-muted-foreground text-lg">{stat.label}</p>
+                    </CardContent>
+                </Card>
+            ))}
         </div>
 
         <div className="mt-16 text-center">
