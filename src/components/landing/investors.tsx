@@ -17,7 +17,7 @@ export function Investors() {
             </p>
           </div>
           <Button size="lg" asChild className="w-fit shadow-lg hover:shadow-xl hover:shadow-accent/30 transition-all duration-300" variant="outline">
-            <a href="#contact">Read Our Vision</a>
+            <a href="#vega">Learn About Vega</a>
           </Button>
         </div>
         <div className="relative flex items-center justify-center">

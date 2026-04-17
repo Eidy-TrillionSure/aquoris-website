@@ -18,7 +18,6 @@ export default function Home() {
         <Traction />
         <Investors />
         <GlowSeparator />
-        {/* <ContactForm /> */}
       </main>
       <Footer />
     </div>

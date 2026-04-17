@@ -27,9 +27,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          {/* <Button asChild variant="ghost">
-            <a href="#contact">Contact</a>
-          </Button> */}
           <Button asChild className="shadow-lg hover:shadow-primary/30 transition-shadow">
              <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">Request Demo</a>
           </Button>
