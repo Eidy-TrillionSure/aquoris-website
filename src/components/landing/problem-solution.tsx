@@ -39,9 +39,9 @@ export function ProblemSolution() {
                 />
             )}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution: Vega OS</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution: Vega</h2>
               <p className="text-muted-foreground md:text-xl/relaxed">
-                Aquoris Intelligence provides Vega OS, a clinical reasoning platform that integrates seamlessly into doctor workflows. By structuring patient encounters and automating documentation with multimodal AI, Vega OS gives physicians the space to focus on critical thinking and patient care. Its multilingual capabilities are designed for the diverse healthcare ecosystems across Asia.
+                Aquoris Intelligence provides Vega, a clinical reasoning platform that integrates seamlessly into doctor workflows. By structuring patient encounters and automating documentation with multimodal AI, Vega gives physicians the space to focus on critical thinking and patient care. Its multilingual capabilities are designed for the diverse healthcare ecosystems across Asia.
               </p>
             </div>
         </div>

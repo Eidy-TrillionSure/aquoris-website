@@ -2,7 +2,7 @@ import { SectionWrapper } from './section-wrapper';
 import { BriefcaseMedical, BotMessageSquare, Clock } from 'lucide-react';
 
 const stats = [
-  { value: '1,800+', label: 'Doctors Using Vega OS Across Asia', icon: <BriefcaseMedical className="h-8 w-8 text-primary-foreground/80"/> },
+  { value: '1,800+', label: 'Doctors Using Vega Across Asia', icon: <BriefcaseMedical className="h-8 w-8 text-primary-foreground/80"/> },
   { value: '50,000+', label: 'Notes Automated', icon: <BotMessageSquare className="h-8 w-8 text-primary-foreground/80"/> },
   { value: 'Real-time', label: 'Clinical Reasoning Support', icon: <Clock className="h-8 w-8 text-primary-foreground/80"/> },
 ];

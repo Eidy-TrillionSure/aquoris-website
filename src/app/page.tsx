@@ -2,7 +2,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/landing/hero';
 import { ProblemSolution } from '@/components/landing/problem-solution';
-import { VegaOS } from '@/components/landing/vega-os';
+import { Vega } from '@/components/landing/vega-os';
 import { MultilingualReasoning } from '@/components/landing/multilingual-reasoning';
 import { Traction } from '@/components/landing/traction';
 import { Investors } from '@/components/landing/investors';
@@ -16,7 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <ProblemSolution />
-        <VegaOS />
+        <Vega />
         <GlowSeparator />
         <MultilingualReasoning />
         <Traction />

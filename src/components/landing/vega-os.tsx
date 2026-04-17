@@ -11,7 +11,7 @@ const features = [
   {
     icon: <MessageSquareQuote className="w-8 h-8 text-primary-foreground/80" />,
     title: 'Real-time Reasoning',
-    description: 'Vega OS provides decision support, offering differential diagnoses and clinical guidelines during patient encounters to enhance diagnostic accuracy.',
+    description: 'Vega provides decision support, offering differential diagnoses and clinical guidelines during patient encounters to enhance diagnostic accuracy.',
   },
   {
     icon: <Globe2 className="w-8 h-8 text-primary-foreground/80" />,
@@ -20,12 +20,12 @@ const features = [
   },
 ];
 
-export function VegaOS() {
+export function Vega() {
   return (
-    <SectionWrapper id="vega-os" className="bg-secondary/30">
+    <SectionWrapper id="vega" className="bg-secondary/30">
       <div className="flex flex-col items-center text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-          Vega OS: The Clinical Reasoning Platform
+          Vega: The Clinical Reasoning Platform
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
           A calm, intelligent operating system designed to support clinical excellence and restore focus to the practice of medicine.

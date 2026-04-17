@@ -54,7 +54,7 @@ export function MultilingualReasoning() {
           Asia-First Multilingual Clinical Reasoning
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          Enter a clinical scenario in any supported language. Our AI will provide reasoning and insights in that same language, demonstrating the core of Vega OS.
+          Enter a clinical scenario in any supported language. Our AI will provide reasoning and insights in that same language, demonstrating the core of Vega.
         </p>
       </div>
 

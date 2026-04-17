@@ -90,7 +90,7 @@ export function ChatLauncher() {
               ))}
               {messages.length === 0 && (
                 <div className="text-center text-sm text-muted-foreground pt-8">
-                  Ask Vega about Aquoris, Vega OS, or clinical workflows…
+                  Ask Vega about Aquoris, Vega, or clinical workflows…
                 </div>
               )}
             </CardContent>

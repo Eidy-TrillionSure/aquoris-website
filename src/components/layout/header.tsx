@@ -5,7 +5,7 @@ import { Logo } from '../logo';
 export function Header() {
   const navLinks = [
     { name: 'Problem', href: '#problem' },
-    { name: 'Vega OS', href: '#vega-os' },
+    { name: 'Vega', href: '#vega' },
     { name: 'AI Demo', href: '#demo' },
     { name: 'Investors', href: '#investors' },
   ];
