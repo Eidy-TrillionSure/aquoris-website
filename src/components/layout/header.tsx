@@ -6,7 +6,6 @@ export function Header() {
   const navLinks = [
     { name: 'Problem', href: '#problem' },
     { name: 'Vega', href: '#vega' },
-    { name: 'AI Demo', href: '#demo' },
     { name: 'Investors', href: '#investors' },
   ];
 
@@ -30,10 +29,10 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end space-x-4">
           {/* <Button asChild variant="ghost">
             <a href="#contact">Contact</a>
-          </Button>
-          <Button asChild className="shadow-lg hover:shadow-primary/30 transition-shadow">
-             <a href="#demo">Request Demo</a>
           </Button> */}
+          <Button asChild className="shadow-lg hover:shadow-primary/30 transition-shadow">
+             <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">Request Demo</a>
+          </Button>
         </div>
       </div>
     </header>
