@@ -5,7 +5,6 @@ import { ExternalLink } from 'lucide-react';
 
 export function Header() {
   const navLinks = [
-    { name: 'Problem', href: '#problem' },
     { name: 'Vega', href: '#vega' },
     { name: 'Investors', href: '#investors' },
   ];

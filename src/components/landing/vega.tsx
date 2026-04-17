@@ -40,9 +40,9 @@ export function Vega() {
             </p>
         </div>
 
-        <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
+        <div className="flex flex-wrap items-stretch justify-center gap-8 mt-16">
             {features.map((feature) => (
-            <Card key={feature.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
+            <Card key={feature.title} className="w-full max-w-sm shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
                 <CardContent className="p-8 flex flex-col items-center text-center gap-2 pt-8">
                     <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
                         {feature.icon}
@@ -54,9 +54,9 @@ export function Vega() {
             ))}
         </div>
 
-        <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-20">
+        <div className="flex flex-wrap items-stretch justify-center gap-8 mt-20">
             {stats.map((stat) => (
-                <Card key={stat.label} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
+                <Card key={stat.label} className="w-full max-w-sm shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
                     <CardContent className="p-8 flex flex-col items-center text-center gap-2 pt-8">
                         <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
                             {stat.icon}
