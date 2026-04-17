@@ -1,7 +1,7 @@
 import { SectionWrapper } from './section-wrapper';
 import { FileText, MessageSquareQuote, Globe2, BriefcaseMedical, BotMessageSquare, Clock, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 
 const features = [
   {
@@ -42,15 +42,13 @@ export function Vega() {
 
         <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
             {features.map((feature) => (
-            <Card key={feature.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm text-left">
-                <CardHeader className="flex flex-row items-center gap-4">
-                <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center">
-                    {feature.icon}
-                </div>
-                <CardTitle>{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                <p className="text-muted-foreground">{feature.description}</p>
+            <Card key={feature.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm">
+                <CardContent className="p-8 flex flex-col items-center text-center gap-2 pt-8">
+                    <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
+                        {feature.icon}
+                    </div>
+                    <CardTitle>{feature.title}</CardTitle>
+                    <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
             </Card>
             ))}
