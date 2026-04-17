@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { useFormStatus } from 'react-dom';
 import { useToast } from '@/hooks/use-toast';
 import { SectionWrapper } from './section-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,8 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { LoaderCircle } from 'lucide-react';
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton({ pending }: { pending: boolean }) {
   return (
     <Button type="submit" disabled={pending} className="w-full shadow-lg hover:shadow-primary/30 transition-shadow">
       {pending && <LoaderCircle className="mr-2 h-4 w-4 animate-spin" />}
@@ -60,7 +58,7 @@ export function ContactForm() {
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" placeholder="Your message..." required className="min-h-[120px]" />
             </div>
-            <SubmitButton />
+            <SubmitButton pending={pending} />
           </form>
         </CardContent>
       </Card>
