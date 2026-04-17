@@ -6,10 +6,13 @@ import { Toaster } from '@/components/ui/toaster';
 const siteConfig = {
   name: 'Vega AI by Aquoris Intelligence',
   url: 'https://www.aquoris.ai',
-  description: 'Discover Vega AI by Aquoris Intelligence. An advanced AI clinical reasoning platform that supports doctors with real-time multilingual insight and automated documentation. Learn how Vega AI is reducing physician burnout and enhancing patient care.',
+  description: 'Vega AI is a clinical reasoning platform that supports doctors with real-time multilingual insight and automated documentation, reducing physician burnout and enhancing patient care.',
   author: 'Aquoris Intelligence',
   keywords: 'Vega, Vega AI, Aquoris Intelligence, AI clinical reasoning, physician burnout, medical documentation automation, multilingual healthcare AI, clinical decision support',
 };
+
+const ogTitle = 'Vega AI: The Clinical Reasoning Platform for Doctors';
+const ogDescription = 'Discover how Vega AI supports doctors with real-time multilingual insight and automated documentation, helping reduce physician burnout and enhance patient care.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -27,27 +30,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteConfig.url,
-    title: 'Vega AI: Clinical Reasoning Intelligence for Doctors',
-    description: siteConfig.description,
+    title: ogTitle,
+    description: ogDescription,
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/og-image.png`, // You should create this image and place it in the /public folder
+        url: 'og-image.png', // Place in /public folder
         width: 1200,
         height: 630,
-        alt: 'Vega AI by Aquoris Intelligence',
+        alt: 'A promotional image for Vega AI by Aquoris Intelligence',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vega AI: Clinical Reasoning Intelligence for Doctors',
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og-image.png`],
-    creator: `@${siteConfig.author}`,
+    title: ogTitle,
+    description: ogDescription,
+    images: ['og-image.png'], // Place in /public folder
+    // creator: '@YourTwitterHandle', // Add your twitter handle
   },
   icons: {
-    icon: '/favicon.ico', // You should create these icons and place them in the /public folder
+    icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
 };
