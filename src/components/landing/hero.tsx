@@ -16,10 +16,10 @@ export function Hero() {
       />
       <div className="container relative text-center animate-fade-in-up">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 dark:from-white dark:to-gray-300">
-          Reasoning Intelligence for Doctors
+          Vega AI: Reasoning Intelligence for Doctors
         </h1>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl mt-6">
-          Aquoris Intelligence builds Vega — a clinical reasoning platform supporting doctors across Asia with real-time multilingual insight and automated documentation.
+          Aquoris Intelligence builds Vega AI — a clinical reasoning platform supporting doctors across Asia with real-time multilingual insight and automated documentation.
         </p>
       </div>
     </section>

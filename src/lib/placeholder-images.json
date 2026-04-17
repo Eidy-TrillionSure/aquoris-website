@@ -2,13 +2,13 @@
   "placeholderImages": [
     {
       "id": "abstract-data-flow",
-      "description": "An abstract visualization of complex data flows and reasoning pathways in a medical context.",
+      "description": "Abstract visualization of data complexities in healthcare, representing the physician burnout challenges that Vega AI is designed to solve.",
       "imageUrl": "https://images.unsplash.com/photo-1626908013351-800ddd734b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGRhdGF8ZW58MHx8fHwxNzYzMTE1NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract data"
     },
     {
       "id": "ai-reasoning-network",
-      "description": "A minimal, premium visual representing an AI intelligence network with interconnected nodes.",
+      "description": "A visual representation of the Vega AI reasoning network, showcasing the intelligent core of the Aquoris clinical solution.",
       "imageUrl": "https://images.unsplash.com/photo-1674027444474-e63f9d516f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMG5ldHdvcmt8ZW58MHx8fHwxNzYzMTczODExfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai network"
     }
