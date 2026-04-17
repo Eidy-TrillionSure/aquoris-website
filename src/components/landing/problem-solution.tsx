@@ -28,6 +28,12 @@ export function ProblemSolution() {
             )}
         </div>
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+            <div className="space-y-4 md:order-last">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution: Vega</h2>
+              <p className="text-muted-foreground md:text-xl/relaxed">
+                Aquoris Intelligence provides Vega, a clinical reasoning platform that integrates seamlessly into doctor workflows. By structuring patient encounters and automating documentation with multimodal AI, Vega gives physicians the space to focus on critical thinking and patient care. Its multilingual capabilities are designed for the diverse healthcare ecosystems across Asia.
+              </p>
+            </div>
             {solutionImage && (
                 <Image
                     src={solutionImage.imageUrl}
@@ -35,15 +41,9 @@ export function ProblemSolution() {
                     data-ai-hint={solutionImage.imageHint}
                     width={600}
                     height={400}
-                    className="rounded-xl object-cover shadow-lg md:order-first aspect-[3/2]"
+                    className="rounded-xl object-cover shadow-lg aspect-[3/2]"
                 />
             )}
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">The Aquoris Solution: Vega</h2>
-              <p className="text-muted-foreground md:text-xl/relaxed">
-                Aquoris Intelligence provides Vega, a clinical reasoning platform that integrates seamlessly into doctor workflows. By structuring patient encounters and automating documentation with multimodal AI, Vega gives physicians the space to focus on critical thinking and patient care. Its multilingual capabilities are designed for the diverse healthcare ecosystems across Asia.
-              </p>
-            </div>
         </div>
       </div>
     </SectionWrapper>
