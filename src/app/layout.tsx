@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
-import { ChatLauncher } from '@/components/chat/chat-launcher';
 
 export const metadata: Metadata = {
   title: 'Aquoris Intelligence',
@@ -24,7 +23,6 @@ export default function RootLayout({
       <body className={cn('font-body antialiased min-h-screen bg-background font-sans')}>
         {children}
         <Toaster />
-        <ChatLauncher />
       </body>
     </html>
   );

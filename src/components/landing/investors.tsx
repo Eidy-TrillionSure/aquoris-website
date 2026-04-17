@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { SectionWrapper } from './section-wrapper';
 
 export function Investors() {
@@ -16,9 +15,6 @@ export function Investors() {
               We are on a mission to revolutionize healthcare by building the cognitive layer for clinical medicine. Aquoris Intelligence is poised to become the essential OS for healthcare institutions worldwide, creating a future where technology empowers doctors to provide the best possible care.
             </p>
           </div>
-          <Button size="lg" asChild className="w-fit shadow-lg hover:shadow-xl hover:shadow-accent/30 transition-all duration-300" variant="outline">
-            <a href="#vega">Learn About Vega</a>
-          </Button>
         </div>
         <div className="relative flex items-center justify-center">
           <div className="absolute w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
