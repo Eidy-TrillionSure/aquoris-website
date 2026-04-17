@@ -56,18 +56,22 @@ export function Vega() {
             ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 mt-24">
-            {stats.map((stat) => (
-            <div key={stat.label} className="p-6 rounded-lg flex flex-col items-center gap-4">
-                <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center">
-                    {stat.icon}
+        <div className="mt-20">
+            <div className="max-w-5xl mx-auto border rounded-lg bg-background/50 shadow-lg backdrop-blur-sm">
+                <div className="grid divide-y md:divide-y-0 md:divide-x divide-border md:grid-cols-3">
+                    {stats.map((stat) => (
+                        <div key={stat.label} className="p-8 flex flex-col items-center text-center gap-2">
+                            <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center mb-2">
+                                {stat.icon}
+                            </div>
+                            <h3 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline text-primary-foreground/90">
+                                {stat.value}
+                            </h3>
+                            <p className="text-muted-foreground text-lg">{stat.label}</p>
+                        </div>
+                    ))}
                 </div>
-                <h3 className="text-4xl font-bold tracking-tighter text-primary-foreground/90 sm:text-5xl font-headline">
-                {stat.value}
-                </h3>
-                <p className="mt-2 text-muted-foreground text-lg">{stat.label}</p>
             </div>
-            ))}
         </div>
 
         <div className="mt-16 text-center">
