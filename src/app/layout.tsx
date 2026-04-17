@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: 'og-image.png', // Place in /public folder
+        url: 'https://images.unsplash.com/photo-1674027444474-e63f9d516f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMG5ldHdvcmt8ZW58MHx8fHwxNzYzMTczODExfDA&ixlib=rb-4.1.0&q=80&w=1080',
         width: 1200,
         height: 630,
-        alt: 'A promotional image for Vega AI by Aquoris Intelligence',
+        alt: 'A visual representation of the Vega AI reasoning network, showcasing the intelligent core of the Aquoris clinical solution.',
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: ogTitle,
     description: ogDescription,
-    images: ['og-image.png'], // Place in /public folder
+    images: ['https://images.unsplash.com/photo-1674027444474-e63f9d516f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMG5ldHdvcmt8ZW58MHx8fHwxNzYzMTczODExfDA&ixlib=rb-4.1.0&q=80&w=1080'],
     // creator: '@YourTwitterHandle', // Add your twitter handle
   },
   icons: {
