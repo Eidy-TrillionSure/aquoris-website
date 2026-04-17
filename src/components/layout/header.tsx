@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Logo } from '../logo';
+import { ExternalLink } from 'lucide-react';
 
 export function Header() {
   const navLinks = [
@@ -28,7 +29,10 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Button asChild className="shadow-lg hover:shadow-primary/30 transition-shadow">
-             <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">Request Demo</a>
+             <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">
+              Try Vega
+              <ExternalLink />
+             </a>
           </Button>
         </div>
       </div>

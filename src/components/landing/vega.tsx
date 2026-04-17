@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SectionWrapper } from './section-wrapper';
-import { FileText, MessageSquareQuote, Globe2 } from 'lucide-react';
+import { FileText, MessageSquareQuote, Globe2, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const features = [
@@ -29,7 +29,7 @@ export function Vega() {
           Vega: The Clinical Reasoning Platform
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          A calm, intelligent operating system designed to support clinical excellence and restore focus to the practice of medicine.
+          A calm, intelligent operating system designed to support clinical excellence and restore focus to the practice of medicine. Experience the future of clinical support with real-time, multilingual reasoning.
         </p>
       </div>
       <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
@@ -48,22 +48,13 @@ export function Vega() {
         ))}
       </div>
       
-      {/* Merged Demo Section */}
-      <div className="mt-24" id="demo">
-        <div className="flex flex-col items-center text-center space-y-4">
-            <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-                Asia-First Multilingual Clinical Reasoning
-            </h3>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Experience the future of clinical support. Vega provides real-time, multilingual reasoning to empower doctors across Asia.
-            </p>
-        </div>
-        
-        <div className="mt-12 text-center">
-            <Button size="lg" asChild className="shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
-                <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">Try the Live Demo</a>
-            </Button>
-        </div>
+      <div className="mt-16 text-center">
+          <Button size="lg" asChild className="shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
+              <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">
+                Try Vega
+                <ExternalLink />
+              </a>
+          </Button>
       </div>
     </SectionWrapper>
   );
