@@ -11,15 +11,15 @@ export function Investors() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
               For Investors & Partners
             </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We are on a mission to revolutionize healthcare by building the cognitive layer for clinical medicine. Aquoris Intelligence is poised to become the essential OS for healthcare institutions worldwide, creating a future where technology empowers doctors to provide the best possible care.
             </p>
           </div>
         </div>
         <div className="relative flex items-center justify-center min-h-[280px] sm:min-h-[350px] lg:min-h-0">
-          <div className="absolute w-56 h-56 sm:w-72 sm:h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div className="absolute top-0 right-5 sm:right-20 w-56 h-56 sm:w-72 sm:h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-8 left-5 sm:left-20 w-56 h-56 sm:w-72 sm:h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute w-56 h-56 sm:w-72 sm:h-72 bg-primary/60 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute top-0 right-5 sm:right-20 w-56 h-56 sm:w-72 sm:h-72 bg-secondary/60 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-8 left-5 sm:left-20 w-56 h-56 sm:w-72 sm:h-72 bg-accent/60 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
           <p className="relative text-2xl font-semibold text-center font-headline">Join us in shaping the future of global health.</p>
         </div>
       </div>
