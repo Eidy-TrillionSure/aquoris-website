@@ -5,7 +5,6 @@ import { ProblemSolution } from '@/components/landing/problem-solution';
 import { Vega } from '@/components/landing/vega';
 import { Traction } from '@/components/landing/traction';
 import { Investors } from '@/components/landing/investors';
-import { GlowSeparator } from '@/components/landing/glow-separator';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <Vega />
         <Traction />
         <Investors />
-        <GlowSeparator />
       </main>
       <Footer />
     </div>

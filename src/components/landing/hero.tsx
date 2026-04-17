@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
@@ -22,14 +21,6 @@ export function Hero() {
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl mt-6">
           Aquoris Intelligence builds Vega — a clinical reasoning platform supporting doctors across Asia with real-time multilingual insight and automated documentation.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
-          {/* <Button size="lg" asChild className="shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
-            <a href="#demo">Request a Demo</a>
-          </Button> */}
-          <Button size="lg" variant="outline" asChild className="bg-background/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
-            <a href="#vega">Learn More</a>
-          </Button>
-        </div>
       </div>
     </section>
   );
