@@ -1,6 +1,7 @@
 import { SectionWrapper } from './section-wrapper';
-import { FileText, MessageSquareQuote, Globe2, ExternalLink } from 'lucide-react';
+import { FileText, MessageSquareQuote, Globe2, BriefcaseMedical, BotMessageSquare, Clock, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const features = [
   {
@@ -20,40 +21,63 @@ const features = [
   },
 ];
 
+const stats = [
+  { value: '1,800+', label: 'Doctors Using Vega Across Asia', icon: <BriefcaseMedical className="h-8 w-8 text-primary-foreground/80"/> },
+  { value: '50,000+', label: 'Notes Automated', icon: <BotMessageSquare className="h-8 w-8 text-primary-foreground/80"/> },
+  { value: 'Real-time', label: 'Clinical Reasoning Support', icon: <Clock className="h-8 w-8 text-primary-foreground/80"/> },
+];
+
+
 export function Vega() {
   return (
     <SectionWrapper id="vega" className="bg-secondary/30">
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
-        <div className="flex flex-col justify-center space-y-6">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
+        <div className="flex flex-col items-center text-center space-y-4">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
             Vega: The Clinical Reasoning Platform
-          </h2>
-          <p className="text-muted-foreground md:text-xl/relaxed">
-            A calm, intelligent operating system designed to support clinical excellence and restore focus to the practice of medicine. Experience the future of clinical support with real-time, multilingual reasoning.
-          </p>
-          <div className="!mt-8">
+            </h2>
+            <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl">
+            A calm, intelligent operating system designed to support clinical excellence and restore focus to the practice of medicine.
+            </p>
+        </div>
+
+        <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
+            {features.map((feature) => (
+            <Card key={feature.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background/50 backdrop-blur-sm text-left">
+                <CardHeader className="flex flex-row items-center gap-4">
+                <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center">
+                    {feature.icon}
+                </div>
+                <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+            </Card>
+            ))}
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 mt-24">
+            {stats.map((stat) => (
+            <div key={stat.label} className="p-6 rounded-lg flex flex-col items-center gap-4">
+                <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center">
+                    {stat.icon}
+                </div>
+                <h3 className="text-4xl font-bold tracking-tighter text-primary-foreground/90 sm:text-5xl font-headline">
+                {stat.value}
+                </h3>
+                <p className="mt-2 text-muted-foreground text-lg">{stat.label}</p>
+            </div>
+            ))}
+        </div>
+
+        <div className="mt-16 text-center">
             <Button size="lg" asChild className="shadow-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
                 <a href="https://vega.aquoris.ai" target="_blank" rel="noopener noreferrer">
-                  Try Vega
-                  <ExternalLink />
+                Try Vega
+                <ExternalLink />
                 </a>
             </Button>
-          </div>
         </div>
-        <div className="space-y-10">
-          {features.map((feature) => (
-            <div key={feature.title} className="flex items-start gap-6">
-              <div className="bg-primary/50 rounded-full p-3 flex items-center justify-center h-14 w-14 flex-shrink-0">
-                {feature.icon}
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </SectionWrapper>
   );
 }
