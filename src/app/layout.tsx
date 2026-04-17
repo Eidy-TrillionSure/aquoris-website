@@ -4,8 +4,9 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Aquoris Intelligence',
-  description: 'AI-Powered Clinical Reasoning for a Healthier World.',
+  title: 'Vega by Aquoris Intelligence | AI Clinical Reasoning Platform',
+  description: 'Vega by Aquoris Intelligence is an AI-powered clinical reasoning platform supporting doctors with real-time multilingual insight and automated documentation. Reduce physician burnout and enhance patient care with Vega.',
+  keywords: ['Vega', 'Aquoris Intelligence', 'AI clinical reasoning', 'physician burnout', 'medical documentation automation', 'multilingual healthcare AI', 'clinical decision support'],
 };
 
 export default function RootLayout({
